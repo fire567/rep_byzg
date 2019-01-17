@@ -38,6 +38,7 @@ a{
 .content {
   width: 75%;
   padding-left: 5px;
+  margin: 20px;
 }
 .footer{
   border: 2px black solid;
@@ -54,8 +55,30 @@ a{
 }
 
 .drink-item__country {
-  height: 30px;
+  height: 20px;
 }
 .drink-item__country>img {
   height: 100%;
+}
+.name {
+  display: flex;
+  font-size: 22px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #5d605d;
+}
+.name2 {
+  display: flex;
+  font-size: 22px;
+  justify-content: center;
+  margin-bottom: 10px;
+  color:#5d605d;
+}
+
+.prop {
+ display: flex;
+ font-size: 15px;
+ justify-content: center;
+ color: #b0b4b1;
 }
