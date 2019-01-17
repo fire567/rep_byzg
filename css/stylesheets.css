@@ -43,3 +43,19 @@ a{
   border: 2px black solid;
   flex: 0;
 }
+
+.drink-item {
+  width: 250px;
+}
+
+.drink-item__picture {
+  justify-content: center;
+  display: flex;
+}
+
+.drink-item__country {
+  height: 30px;
+}
+.drink-item__country>img {
+  height: 100%;
+}
