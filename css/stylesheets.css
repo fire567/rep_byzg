@@ -2,11 +2,18 @@ body{
   justify-content: center;
   display: flex;
 }
+a{
+ text-decoration: none;
+ color: #4d4e4e;
+ margin: 10px;
+  
+}
 .container {
-  display: flex;
+ 
   flex-direction: column;
   width: 500px;
   height: 98vh;
+  min-height: 100%;
 }
 .header {
   border: 2px black solid;
@@ -20,10 +27,11 @@ body{
   flex: 1;
 }
 .sidebar {
-  border: 2px black solid;
+  //border: 2px black solid;
   height: 350px;
   width: 20%;
   padding-top: 10px;
+  background-color: #e4edec;
 }
 .content {
   width: 75%;
