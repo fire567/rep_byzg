@@ -5,6 +5,6 @@ window.router = {
 }
 
 $(function () {
-  $('.content').html($('#indexTmpl').tmpl());
+  $('.content').html($('#homeTmpl').tmpl());
 });
 
