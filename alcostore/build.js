@@ -30,9 +30,10 @@ fs.readdir(PATH.src('pages'), function (err, files) {
   });
   fs.writeFile(PATH.dist('index.html'), htmlContent, defaultCallback);
 });
+
 fs.copyFile(PATH.src('stylesheets.css'), PATH.dist('stylesheets.css'), defaultCallback);
 
-transformFile(PATH.src('scripts.js'), { presets: ['@babel/preset-env'] }, (error, result) => {
-  fs.writeFile(PATH.dist('bundle.js'), result.code, defaultCallback);
-});
+// transformFile(PATH.src('scripts.js'), { presets: ['@babel/preset-env'] }, (error, result) => {
+//   fs.writeFile(PATH.dist('bundle.js'), result.code, defaultCallback);
+// });
 
