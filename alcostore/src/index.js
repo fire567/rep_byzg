@@ -1,12 +1,6 @@
-import $ from 'jquery';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
-window.router = {
-  goTo(pageName) {
-    $('.content').html($(`#${pageName}Tmpl`).tmpl());
-  }
-}
+import App from './components/App/App.jsx';
 
-$(function () {
-  $('.content').html($('#homeTmpl').tmpl());
-});
-
+ReactDOM.render(<App/>, document.getElementById('root'));
