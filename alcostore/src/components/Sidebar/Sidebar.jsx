@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 
-import './Sidebar.css'
+import { Wrapper } from './styled.js';
+
 
 export default class Sidebar extends Component {
   render(){
     return(
-      <div className="sidebar">
+      <Wrapper>
         <a href="javascript:void(0)">Главная</a>
         <p />
         <a href="javascript:void(0)">Глинтевейн</a>
         <p />
         <a href="javascript:void(0)">Вермут</a>
-      </div>
+      </Wrapper>
     )
   }
 }
