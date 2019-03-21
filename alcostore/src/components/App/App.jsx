@@ -3,22 +3,21 @@ import React, { Component } from 'react';
 import Sidebar from '../Sidebar/Sidebar.jsx';
 import Footer from '../Footer/Footer.jsx';
 import Header from '../Header/Header.jsx';
-import './App.css';
-
+import { Wrapper, Body, Content } from './styled';
 
 export default class App extends Component {
   render() {
     return (
-      <div className="container">
-         <Header />
-        <div className="body">
+      <Wrapper>
+        <Header />
+        <Body>
           <Sidebar />
-          <div className="content">
-
-          </div>
-        </div>
+          <Content>
+            {this.props.children}
+          </Content>
+        </Body>
         <Footer />
-      </div>
+      </Wrapper>
     )
   }
 }
