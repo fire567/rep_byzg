@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faRubleSign, faMinusSquare, faPlusSquare, faTrashAlt, faStar } from '@fortawesome/free-solid-svg-icons'
 
 import { Wrapper, DrinkItemCountry, DrinkItemPicture, Name, Prop, Price, MidPrice,
   Center, Stars, PriceAndScore
@@ -26,13 +28,13 @@ export default class DrinkItem extends Component {
         <PriceAndScore>
           <div>
             <a href="javascript:void(0)">
-              <i class="far fa-heart"></i>
+              <FontAwesomeIcon icon={faHeart} />
             </a>
           </div>
           <div>
             <Price>
               {item.price}
-              <i class="fas fa-ruble-sign"></i>
+              <FontAwesomeIcon icon={faRubleSign} />
               <br />
             </Price>
             <Mid-price>
@@ -41,29 +43,33 @@ export default class DrinkItem extends Component {
             <div>
               <Center>
                 <a href="javascript:void(0)">
-                  <i class="far fa-minus-square"></i>
+                  <FontAwesomeIcon icon={faMinusSquare} />
                 </a>
                 1
                 <a href="javascript:void(0)">
-                  <i class="far fa-plus-square"></i>
+                  <FontAwesomeIcon icon={faPlusSquare} />
                 </a>
                 <a href="javascript:void(0)">
-                  <i class="far fa-trash-alt"></i>
+                  <FontAwesomeIcon icon={faTrashAlt} />
                 </a>
               </Center>
             </div>
             <Stars>
               <a href="javascript:void(0)">
-                <i class="far fa-star"></i>
-              </a><a href="javascript:void(0)">
-              <i class="far fa-star"></i>
-            </a><a href="javascript:void(0)">
-              <i class="far fa-star"></i>
-            </a><a href="javascript:void(0)">
-              <i class="far fa-star"></i>
-            </a><a href="javascript:void(0)">
-              <i class="far fa-star"></i>
-            </a>
+                <FontAwesomeIcon icon={faStar} />
+              </a>
+              <a href="javascript:void(0)">
+                <FontAwesomeIcon icon={faStar} />
+              </a>
+              <a href="javascript:void(0)">
+                <FontAwesomeIcon icon={faStar} />
+              </a>
+              <a href="javascript:void(0)">
+                <FontAwesomeIcon icon={faStar} />
+              </a>
+              <a href="javascript:void(0)">
+                <FontAwesomeIcon icon={faStar} />
+              </a>
               {item.rating} оценок
             </Stars>
             <br />
