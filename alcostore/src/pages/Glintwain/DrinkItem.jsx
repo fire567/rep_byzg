@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faRubleSign, faMinusSquare, faPlusSquare, faTrashAlt, faStar } from '@fortawesome/free-solid-svg-icons'
 
-import { Wrapper, DrinkItemCountry, DrinkItemPicture, Name, Prop, Price, MidPrice,
-  Center, Stars, PriceAndScore
+import { Wrapper, Country, Picture, Name, Prop, Price, MidPrice,
+  RatingControls, Stars, PriceAndScore
 } from './styled/DrinkItem.js';
 
 export default class DrinkItem extends Component {
@@ -11,13 +11,12 @@ export default class DrinkItem extends Component {
     const { item } = this.props;
     return(
       <Wrapper>
-        <div></div>
-        <DrinkItemCountry>
+        <Country>
           <img src="../img/United_States.jpg" />
-        </DrinkItemCountry>
-        <DrinkItemPicture>
+        </Country>
+        <Picture>
           <img src="../img/Woodford-Reserve.jpg" />
-        </DrinkItemPicture>
+        </Picture>
         <Name>
           <div>{item.name}</div>
           <div>{item.subname}</div>
@@ -37,11 +36,11 @@ export default class DrinkItem extends Component {
               <FontAwesomeIcon icon={faRubleSign} />
               <br />
             </Price>
-            <Mid-price>
+            <MidPrice>
               средняя цена
-            </Mid-price>
+            </MidPrice>
             <div>
-              <Center>
+              <RatingControls>
                 <a href="javascript:void(0)">
                   <FontAwesomeIcon icon={faMinusSquare} />
                 </a>
@@ -52,24 +51,14 @@ export default class DrinkItem extends Component {
                 <a href="javascript:void(0)">
                   <FontAwesomeIcon icon={faTrashAlt} />
                 </a>
-              </Center>
+              </RatingControls>
             </div>
             <Stars>
-              <a href="javascript:void(0)">
-                <FontAwesomeIcon icon={faStar} />
-              </a>
-              <a href="javascript:void(0)">
-                <FontAwesomeIcon icon={faStar} />
-              </a>
-              <a href="javascript:void(0)">
-                <FontAwesomeIcon icon={faStar} />
-              </a>
-              <a href="javascript:void(0)">
-                <FontAwesomeIcon icon={faStar} />
-              </a>
-              <a href="javascript:void(0)">
-                <FontAwesomeIcon icon={faStar} />
-              </a>
+              {Array(5).fill().map((_, i) => (
+                <a href="javascript:void(0)" key={i}>
+                  <FontAwesomeIcon icon={faStar} />
+                </a>
+              ))}
               {item.rating} оценок
             </Stars>
             <br />

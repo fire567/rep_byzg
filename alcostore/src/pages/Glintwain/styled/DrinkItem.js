@@ -4,25 +4,25 @@ export const Wrapper = styled.div`
 	width: 250px;
 `
 
-export const DrinkItemCountry = styled.div`
+export const Country = styled.div`
 	height: 20px;
 `
 
-export const DrinkItemPicture = styled.div`
-	 justify-content: center;
-	 display: flex;
+export const Picture = styled.div`
+  justify-content: center;
+  display: flex;
 `
 
 export const Name = styled.div`
 	 text-align: center;
-     font-size: 20px;
-     margin-top: 20px;
-     margin-bottom: 5px;
-     color: #5d605d;
+   font-size: 20px;
+   margin-top: 20px;
+   margin-bottom: 5px;
+   color: #5d605d;
 `
 
 export const Prop = styled.div`
-	 padding-bottom: 50px;
+  padding-bottom: 50px;
   display: flex;
   font-size: 15px;
   justify-content: center;
@@ -40,7 +40,7 @@ export const MidPrice = styled.div`
   text-align: center;
 `
 
-export const Center = styled.div`
+export const RatingControls = styled.div`
 	text-align: center;
   margin: auto;
   width: 150px;
@@ -49,7 +49,7 @@ export const Center = styled.div`
 `
 
 export const Stars = styled.div`
-	 width: 150;
+  width: 150px;
   margin: 10px;
   color: #b0b4b1;
   font-size: 15px;
