@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App/App.jsx';
 import HomePage from './pages/Home/Home.jsx';
 
+
 ReactDOM.render((
   <Router history={browserHistory} >
     <Route component={App} >
@@ -14,3 +15,4 @@ ReactDOM.render((
   ),
   document.getElementById('root')
 );
+
