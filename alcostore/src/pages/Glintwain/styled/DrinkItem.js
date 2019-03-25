@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
-
-
 export const Wrapper = styled.div`
 	width: 250px;
 `
 
-export const Drink-item__country = styled.div`
+export const DrinkItemCountry = styled.div`
 	height: 20px;
 `
 
-export const Drink-item__picture = styled.div`
+export const DrinkItemPicture = styled.div`
 	 justify-content: center;
 	 display: flex;
 `
@@ -36,7 +34,7 @@ export const Prise = styled.div`
      font-size: 25px;
 `
 
-export const Mid-prise = styled.div`
+export const MidPrise = styled.div`
 	font-size: 13px;
   color: #b0b4b1;
   text-align: center;
@@ -57,11 +55,6 @@ export const Stars = styled.div`
   font-size: 15px;
 `
 
-export const Prise-and-score = styled.div`
+export const PriseAndScore = styled.div`
 	 display: flex;
 `
-
-
-
-
-

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 
 import { Wrapper } from './styled.js';
-
 
 export default class Sidebar extends Component {
   render(){
     return(
       <Wrapper>
-        <a href="javascript:void(0)">Главная</a>
+        <Link to='/'>Главная</Link>
         <p />
-        <a href="javascript:void(0)">Глинтевейн</a>
+        <Link to='glintwain'>Глинтевейн</Link>
         <p />
         <a href="javascript:void(0)">Вермут</a>
       </Wrapper>
