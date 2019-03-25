@@ -29,12 +29,12 @@ export const Prop = styled.div`
   color: #b0b4b1;
 `
 
-export const Prise = styled.div`
+export const Price = styled.div`
 	 text-align: center;
      font-size: 25px;
 `
 
-export const MidPrise = styled.div`
+export const MidPrice = styled.div`
 	font-size: 13px;
   color: #b0b4b1;
   text-align: center;
@@ -55,6 +55,6 @@ export const Stars = styled.div`
   font-size: 15px;
 `
 
-export const PriseAndScore = styled.div`
+export const PriceAndScore = styled.div`
 	 display: flex;
 `

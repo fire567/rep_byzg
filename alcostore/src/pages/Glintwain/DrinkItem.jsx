@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import { Wrapper, DrinkItemCountry, DrinkItemPicture, Name, Prop, Prise, MidPrise,
-  Center, Stars, PriseAndScore
+import { Wrapper, DrinkItemCountry, DrinkItemPicture, Name, Prop, Price, MidPrice,
+  Center, Stars, PriceAndScore
 } from './styled/DrinkItem.js';
 
 export default class DrinkItem extends Component {
@@ -23,21 +23,21 @@ export default class DrinkItem extends Component {
         <Prop>
           {item.prop}
         </Prop>
-        <PriseAndScore>
+        <PriceAndScore>
           <div>
             <a href="javascript:void(0)">
               <i class="far fa-heart"></i>
             </a>
           </div>
           <div>
-            <Prise>
+            <Price>
               {item.price}
               <i class="fas fa-ruble-sign"></i>
               <br />
-            </Prise>
-            <Mid-prise>
+            </Price>
+            <Mid-price>
               средняя цена
-            </Mid-prise>
+            </Mid-price>
             <div>
               <Center>
                 <a href="javascript:void(0)">
@@ -68,7 +68,7 @@ export default class DrinkItem extends Component {
             </Stars>
             <br />
           </div>
-        </PriseAndScore>
+        </PriceAndScore>
       </Wrapper>
     )
   }
