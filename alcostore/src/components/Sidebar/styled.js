@@ -5,4 +5,4 @@ export const Wrapper = styled.div`
   width: 20%;
   padding-top: 10px;
   background-color: #e4edec;
-`
+`;

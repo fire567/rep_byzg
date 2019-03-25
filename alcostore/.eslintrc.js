@@ -27,7 +27,7 @@ module.exports = {
         config: path.resolve(__dirname, 'webpack.config.js'),
       },
       node: {
-        moduleDirectory: ['node_modules', './frontend'],
+        moduleDirectory: ['node_modules', './src'],
       },
     },
   },

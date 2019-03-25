@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "format:js": "eslint --ext .jsx --ext .js --fix",
-    "lint:js": "eslint \"src/**/*.js\" \"src/**/*.jsx\""
+    "lint": "eslint src/**/*.js* --fix"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "eslint-import-resolver-webpack": "^0.11.0",
     "jquery": "^3.3.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
