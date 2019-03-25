@@ -58,16 +58,6 @@ module.exports = {
       },
     ],
 
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: true,
-        optionalDependencies: false,
-        peerDependencies: false,
-        packageDir: './',
-      },
-    ],
-
     'react/jsx-no-undef': 2,
     'react/jsx-uses-react': 1,
     'react/jsx-uses-vars': 1,
