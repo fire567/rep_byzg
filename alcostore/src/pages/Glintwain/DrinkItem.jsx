@@ -1,75 +1,84 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHeart,
+  faRubleSign,
+  faMinusSquare,
+  faPlusSquare,
+  faTrashAlt,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons';
 
-import { Wrapper, DrinkItemCountry, DrinkItemPicture, Name, Prop, Prise, MidPrise,
-  Center, Stars, PriseAndScore
+import {
+  Wrapper,
+  Country,
+  Picture,
+  Name,
+  Prop,
+  Price,
+  MidPrice,
+  RatingControls,
+  Stars,
+  PriceAndScore,
 } from './styled/DrinkItem.js';
 
 export default class DrinkItem extends Component {
   render() {
     const { item } = this.props;
-    return(
+    return (
       <Wrapper>
-        <div></div>
-        <DrinkItemCountry>
+        <Country>
           <img src="../img/United_States.jpg" />
-        </DrinkItemCountry>
-        <DrinkItemPicture>
+        </Country>
+        <Picture>
           <img src="../img/Woodford-Reserve.jpg" />
-        </DrinkItemPicture>
+        </Picture>
         <Name>
           <div>{item.name}</div>
           <div>{item.subname}</div>
         </Name>
-        <Prop>
-          {item.prop}
-        </Prop>
-        <PriseAndScore>
+        <Prop>{item.prop}</Prop>
+        <PriceAndScore>
           <div>
             <a href="javascript:void(0)">
-              <i class="far fa-heart"></i>
+              <FontAwesomeIcon icon={faHeart} />
             </a>
           </div>
           <div>
-            <Prise>
+            <Price>
               {item.price}
-              <i class="fas fa-ruble-sign"></i>
+              <FontAwesomeIcon icon={faRubleSign} />
               <br />
-            </Prise>
-            <Mid-prise>
-              средняя цена
-            </Mid-prise>
+            </Price>
+            <MidPrice>средняя цена</MidPrice>
             <div>
-              <Center>
+              <RatingControls>
                 <a href="javascript:void(0)">
-                  <i class="far fa-minus-square"></i>
+                  <FontAwesomeIcon icon={faMinusSquare} />
                 </a>
                 1
                 <a href="javascript:void(0)">
-                  <i class="far fa-plus-square"></i>
+                  <FontAwesomeIcon icon={faPlusSquare} />
                 </a>
                 <a href="javascript:void(0)">
-                  <i class="far fa-trash-alt"></i>
+                  <FontAwesomeIcon icon={faTrashAlt} />
                 </a>
-              </Center>
+              </RatingControls>
             </div>
             <Stars>
-              <a href="javascript:void(0)">
-                <i class="far fa-star"></i>
-              </a><a href="javascript:void(0)">
-              <i class="far fa-star"></i>
-            </a><a href="javascript:void(0)">
-              <i class="far fa-star"></i>
-            </a><a href="javascript:void(0)">
-              <i class="far fa-star"></i>
-            </a><a href="javascript:void(0)">
-              <i class="far fa-star"></i>
-            </a>
+              {Array(5)
+                .fill()
+                .map((_, i) => (
+                  <a href="javascript:void(0)" key={i}>
+                    <FontAwesomeIcon icon={faStar} />
+                  </a>
+                ))}
               {item.rating} оценок
             </Stars>
             <br />
           </div>
-        </PriseAndScore>
+        </PriceAndScore>
       </Wrapper>
-    )
+    );
   }
 }

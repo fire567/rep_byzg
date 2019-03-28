@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Sidebar from '../Sidebar/Sidebar.jsx';
-import Footer from '../Footer/Footer.jsx';
-import Header from '../Header/Header.jsx';
+import Sidebar from '../Sidebar/Sidebar';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import { Wrapper, Body, Content } from './styled';
 
 export default class App extends Component {
@@ -12,13 +12,10 @@ export default class App extends Component {
         <Header />
         <Body>
           <Sidebar />
-          <Content>
-            {this.props.children}
-          </Content>
+          <Content>{this.props.children}</Content>
         </Body>
         <Footer />
       </Wrapper>
-    )
+    );
   }
 }
-
