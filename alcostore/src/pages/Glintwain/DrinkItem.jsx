@@ -31,7 +31,7 @@ export default class DrinkItem extends Component {
           <img src="../img/United_States.jpg" />
         </Country>
         <Picture>
-          <img src="../img/Woodford-Reserve.jpg" />
+          <img src={`../img/${item.picture}`} />
         </Picture>
         <Name>
           <div>{item.name}</div>

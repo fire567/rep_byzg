@@ -5,6 +5,12 @@ import DrinkItem from './DrinkItem';
 
 export default class GlintwainPage extends Component {
   render() {
-    return <DrinkItem item={drinkItems[0]} />;
+    return (
+      <div>
+        {drinkItems.map((drinkItem, i) => (
+          <DrinkItem key={i} item={drinkItem} />
+        ))}
+      </div>
+    );
   }
 }
