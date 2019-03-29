@@ -11,7 +11,8 @@ export default class Sidebar extends Component {
         <p />
         <Link to="glintwain">Глинтевейн</Link>
         <p />
-        <a href="javascript:void(0)">Вермут</a>
+        <Link to="vermut">Вермут</Link>
+        <p />
       </Wrapper>
     );
   }

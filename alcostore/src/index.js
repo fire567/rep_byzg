@@ -6,6 +6,7 @@ import { GlobalStyle } from './style.global';
 import App from './components/App/App';
 import HomePage from './pages/Home/Home';
 import GlintwainPage from './pages/Glintwain/Glintwain';
+import VermutPage from './pages/Vermut/Vermut';
 
 ReactDOM.render(
   <div>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Route component={App}>
         <Route path="/" component={HomePage} />
         <Route path="glintwain" component={GlintwainPage} />
+        <Route path="vermut" component={VermutPage} />
       </Route>
     </Router>
   </div>,
