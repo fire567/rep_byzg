@@ -20,15 +20,27 @@ import {
   RatingControls,
   Stars,
   PriceAndScore,
-} from './styled/DrinkItem.js';
+} from './styled';
 
 export default class DrinkItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
+
+  increment() {
+    this.setState({ count: this.state.count + 1 });
+  }
+
   render() {
     const { item } = this.props;
+    const increment = this.increment.bind(this);
     return (
       <Wrapper>
         <Country>
-          <img src="../img/United_States.jpg" />
+          <img src={`../img/${item.country}.jpg`} />
         </Country>
         <Picture>
           <img src={`../img/${item.picture}`} />
@@ -56,8 +68,8 @@ export default class DrinkItem extends Component {
                 <a href="javascript:void(0)">
                   <FontAwesomeIcon icon={faMinusSquare} />
                 </a>
-                1
-                <a href="javascript:void(0)">
+                {this.state.count}
+                <a href="javascript:void(0)" onClick={increment}>
                   <FontAwesomeIcon icon={faPlusSquare} />
                 </a>
                 <a href="javascript:void(0)">

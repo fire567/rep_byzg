@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
+import DrinkItem from '../../components/DrinkItem/DrinkItem';
 import drinkItems from './drinkItems.json';
-import DrinkItem from './DrinkItem';
 
 export default class VermutPage extends Component {
   render() {

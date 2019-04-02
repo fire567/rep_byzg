@@ -5,7 +5,8 @@
     "prop": "0.75 л., США, Кентукки, 43.2%",
     "price": 3299.9,
     "rating": 507,
-    "picture": "Woodford-Reserve.jpg"
+    "picture": "Woodford-Reserve.jpg",
+    "country": "United_States"
   },
   
   {
@@ -14,7 +15,8 @@
     "prop": "0.7 л., США, 43%",
     "price": 1599.90,
     "rating": 726,
-    "picture": "jim_beam_nabor2.jpg"
+    "picture": "jim_beam_nabor2.jpg",
+    "country": "United_States"
   }
   
 ]

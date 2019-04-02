@@ -5,7 +5,8 @@
     "prop": "0.75 л., Италия, Пьемонт, 15%",
     "price": 599.90,
     "rating": 1344,
-    "picture": "MARTINI_new_dis.jpg"
+    "picture": "MARTINI_new_dis.jpg",
+    "country": "Italy"
   },
   
   {
@@ -14,7 +15,8 @@
     "prop": "0.75 л., Италия, 18%",
     "price": 589.99,
     "rating": 614,
-    "picture": "Martini_extra_dry_.jpg"
+    "picture": "Martini_extra_dry_.jpg",
+    "country": "Italy"
   },
   
   {
@@ -23,6 +25,7 @@
     "prop": "1 л., Италия, Пьемонт, 16%",
     "price": 499.99,
     "rating": 36793,
-    "picture": "GANCIA_VERMOUTH_BIANCO1L.jpg"
+    "picture": "GANCIA_VERMOUTH_BIANCO1L.jpg",
+    "country": "Italy"
   }
 ]
