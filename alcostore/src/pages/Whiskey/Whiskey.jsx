@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import drinkItems from './drinkItems.json';
 import DrinkItem from './DrinkItem';
 
-export default class GlintwainPage extends Component {
+export default class WhiskeyPage extends Component {
   render() {
     return (
       <div>

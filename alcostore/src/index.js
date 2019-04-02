@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { GlobalStyle } from './style.global';
 import App from './components/App/App';
 import HomePage from './pages/Home/Home';
-import GlintwainPage from './pages/Glintwain/Glintwain';
+import WhiskeyPage from './pages/Whiskey/Whiskey';
 import VermutPage from './pages/Vermut/Vermut';
 
 ReactDOM.render(
@@ -14,7 +14,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route component={App}>
         <Route path="/" component={HomePage} />
-        <Route path="glintwain" component={GlintwainPage} />
+        <Route path="whiskey" component={WhiskeyPage} />
         <Route path="vermut" component={VermutPage} />
       </Route>
     </Router>
