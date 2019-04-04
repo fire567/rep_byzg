@@ -1,0 +1,55 @@
+{
+  "vermut": [
+    {
+      "name": "Вермут Мартини Бьянко бел/сл",
+      "subname": "",
+      "prop": "0.75 л., Италия, Пьемонт, 15%",
+      "price": 599.90,
+      "rating": 1344,
+      "picture": "MARTINI_new_dis.jpg",
+      "country": "Italy"
+    },
+
+    {
+      "name": "Вермут Мартини Экстра Драй бел.сух",
+      "subname": "",
+      "prop": "0.75 л., Италия, 18%",
+      "price": 589.99,
+      "rating": 614,
+      "picture": "Martini_extra_dry_.jpg",
+      "country": "Italy"
+    },
+
+    {
+      "name": "Вермут сладкий Ганча Бьянко",
+      "subname": "",
+      "prop": "1 л., Италия, Пьемонт, 16%",
+      "price": 499.99,
+      "rating": 36793,
+      "picture": "GANCIA_VERMOUTH_BIANCO1L.jpg",
+      "country": "Italy"
+    }
+  ],
+  "whiskey": [
+    {
+      "name": "Виски (бурбон) Вудфорд",
+      "subname": "Резерв п/к",
+      "prop": "0.75 л., США, Кентукки, 43.2%",
+      "price": 3299.9,
+      "rating": 507,
+      "picture": "Woodford-Reserve.jpg",
+      "country": "United_States"
+    },
+
+    {
+      "name": "Виски (бурбон) Джим Бим",
+      "subname": "Дабл Оак +2 стакана п/к",
+      "prop": "0.7 л., США, 43%",
+      "price": 1599.90,
+      "rating": 726,
+      "picture": "jim_beam_nabor2.jpg",
+      "country": "United_States"
+    }
+
+  ]
+}
