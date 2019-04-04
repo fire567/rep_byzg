@@ -27,6 +27,7 @@ export default class DrinkItem extends Component {
     super(props);
     this.state = {
       count: 0,
+      icon: faHeart,
     };
   }
 
@@ -34,9 +35,19 @@ export default class DrinkItem extends Component {
     this.setState({ count: this.state.count + 1 });
   }
 
+  changeIcon() {
+    this.setState({ icon: faStar });
+  }
+
+  decrement() {
+    this.setState({ count: this.state.count - 1 });
+  }
+
   render() {
     const { item } = this.props;
     const increment = this.increment.bind(this);
+    const decrement = this.decrement.bind(this);
+    const changeIcon = this.changeIcon.bind(this);
     return (
       <Wrapper>
         <Country>
@@ -52,8 +63,8 @@ export default class DrinkItem extends Component {
         <Prop>{item.prop}</Prop>
         <PriceAndScore>
           <div>
-            <a href="javascript:void(0)">
-              <FontAwesomeIcon icon={faHeart} />
+            <a href="javascript:void(0)" onClick={changeIcon}>
+              <FontAwesomeIcon icon={this.state.icon} />
             </a>
           </div>
           <div>
@@ -65,7 +76,7 @@ export default class DrinkItem extends Component {
             <MidPrice>средняя цена</MidPrice>
             <div>
               <RatingControls>
-                <a href="javascript:void(0)">
+                <a href="javascript:void(0)" onClick={decrement}>
                   <FontAwesomeIcon icon={faMinusSquare} />
                 </a>
                 {this.state.count}
