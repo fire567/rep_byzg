@@ -9,6 +9,8 @@ export default class Sidebar extends Component {
       <Wrapper>
         <Link to="/">Главная</Link>
         <p />
+        <Link to="user">Пользователь</Link>
+        <p />
         <Link to="whiskey">Виски</Link>
         <p />
         <Link to="vermut">Вермут</Link>
