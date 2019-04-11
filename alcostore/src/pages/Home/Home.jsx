@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 
 export default class HomePage extends Component {
-  state = {
-    name: '',
-  };
-  handleInputChange = event => {
-    this.setState({ name: event.target.value });
-  };
-
   render() {
     return (
       <div>
-        <div>
-          Введите ваше имя:
-          <input onChange={this.handleInputChange} />
-          <br />
-          Вашк имя: {this.state.name}
-        </div>
         <div>
           Во всем мире уже давно ведутся разъяснительные беседы о вреде сладких
           газированных напитков для здоровья человека. Многие люди пьют их не
