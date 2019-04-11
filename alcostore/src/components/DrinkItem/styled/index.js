@@ -9,8 +9,8 @@ export const Country = styled.div`
 `;
 
 export const Picture = styled.div`
-  justify-content: center;
   display: flex;
+  justify-content: center;
 `;
 
 export const Name = styled.div`
@@ -23,7 +23,6 @@ export const Name = styled.div`
 
 export const Prop = styled.div`
   padding-bottom: 50px;
-  display: flex;
   font-size: 15px;
   justify-content: center;
   color: #b0b4b1;

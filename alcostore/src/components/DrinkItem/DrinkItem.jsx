@@ -33,11 +33,17 @@ export default class DrinkItem extends Component {
   };
 
   decrement = () => {
-    this.setState({ count: this.state.count - 1 });
+    if (this.state.count > 0) {
+      this.setState({ count: this.state.count - 1 });
+    }
   };
 
   changeIcon = () => {
-    this.setState({ icon: faStar });
+    if (this.state.icon == faHeart) {
+      this.setState({ icon: faStar });
+    } else {
+      this.setState({ icon: faHeart });
+    }
   };
 
   render() {
@@ -73,7 +79,9 @@ export default class DrinkItem extends Component {
                 <a href="javascript:void(0)" onClick={this.decrement}>
                   <FontAwesomeIcon icon={faMinusSquare} />
                 </a>
+
                 {this.state.count}
+
                 <a href="javascript:void(0)" onClick={this.increment}>
                   <FontAwesomeIcon icon={faPlusSquare} />
                 </a>
