@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import DrinkItem from '../../components/DrinkItem/DrinkItem';
+import DrinkItems from '../../components/DrinkItems/DrinkItems';
 
 export default class WhiskeyPage extends Component {
   state = {
@@ -15,12 +15,6 @@ export default class WhiskeyPage extends Component {
   }
 
   render() {
-    return (
-      <div>
-        {this.state.drinkItems.map((drinkItem, i) => (
-          <DrinkItem key={i} item={drinkItem} />
-        ))}
-      </div>
-    );
+    return <DrinkItems drinkItems={this.state.drinkItems} />;
   }
 }
