@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import {
+  Wrapper,
+  Header,
+  Name,
+  InputName,
+  Town,
+  InputTown,
+  Bottom,
+  Input,
+  Button,
+} from './styled.js';
+
 export default class UserPage extends Component {
   state = {
     name: '',
@@ -33,19 +45,24 @@ export default class UserPage extends Component {
   render() {
     const { name, town } = this.state;
     return (
-      <div>
+      <Wrapper>
+        <Header>Введите данные</Header>
         <div>
-          <label>Имя</label>
-          <input onChange={this.handleNameChange} value={name} />
+          <Name>Имя*</Name>
+          <InputName>
+            <Input onChange={this.handleNameChange} value={name} />
+          </InputName>
         </div>
         <div>
-          <label>Город</label>
-          <input onChange={this.handleTownChange} value={town} />
+          <Town>Город*</Town>
+          <InputTown>
+            <Input onChange={this.handleTownChange} value={town} />
+          </InputTown>
         </div>
-        <div>
-          <button onClick={this.handleSubmit}>Сохранить</button>
-        </div>
-      </div>
+        <Bottom>
+          <Button onClick={this.handleSubmit}>Сохранить</Button>
+        </Bottom>
+      </Wrapper>
     );
   }
 }
