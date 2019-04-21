@@ -51,6 +51,7 @@
   "user": {
     "name": "qweasd",
     "town": "asd",
-    "sex": "2"
+    "sex": "1",
+    "payment": "5"
   }
 }

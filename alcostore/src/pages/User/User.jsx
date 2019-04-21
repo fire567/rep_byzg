@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import InputText from '../../components/InputText/InputText';
+import InputSelect from '../../components/InputSelect/InputSelect';
+
 import {
   Wrapper,
   Header,
@@ -10,6 +12,7 @@ import {
   Bottom,
   Input,
   Button,
+  SelectWrapper,
 } from './styled.js';
 
 export default class UserPage extends Component {
@@ -21,8 +24,8 @@ export default class UserPage extends Component {
 
   componentDidMount() {
     axios.get('http://localhost:3000/user').then(response => {
-      const { name, town, sex } = response.data;
-      this.setState({ name, town, sex });
+      const { name, town, sex, payment } = response.data;
+      this.setState({ name, town, sex, payment });
     });
   }
 
@@ -38,17 +41,22 @@ export default class UserPage extends Component {
     this.setState({ sex: event.target.value });
   };
 
+  handlePayChange = event => {
+    this.setState({ payment: event.target.value });
+  };
+
   handleSubmit = () => {
-    const { name, town, sex } = this.state;
+    const { name, town, sex, payment } = this.state;
     axios.put('http://localhost:3000/user', {
       name,
       town,
       sex,
+      payment,
     });
   };
 
   render() {
-    const { name, town, sex } = this.state;
+    const { name, town, sex, payment } = this.state;
     return (
       <Wrapper>
         <Header>Введите данные</Header>
@@ -63,11 +71,18 @@ export default class UserPage extends Component {
           value={town}
           label="Город"
         />
-        <select onChange={this.handleSexChange} value={sex}>
-          <option value={1}>мужской</option>
-          <option value={2}>женский</option>
-          <option value={3}>не определен</option>
-        </select>
+        <SelectWrapper>
+          <InputSelect
+            onChange={this.handleSexChange}
+            value={sex}
+            label="Пол"
+          />
+          <InputSelect
+            onChange={this.handlePayChange}
+            value={payment}
+            label="Способ оплаты"
+          />
+        </SelectWrapper>
         <Bottom>
           <Button onClick={this.handleSubmit}>Сохранить</Button>
         </Bottom>

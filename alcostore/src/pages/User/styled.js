@@ -39,3 +39,7 @@ export const Button = styled.button`
   color: white;
   width: 170px;
 `;
+
+export const SelectWrapper = styled.div`
+  display: flex;
+`;
