@@ -51,7 +51,9 @@
   "user": {
     "name": "qweasd",
     "town": "asd",
-    "sex": "1",
-    "payment": "5"
+    "sex": "2",
+    "payment": "2",
+    "eulaConfirm": true,
+    "notificationConfirm": true
   }
 }

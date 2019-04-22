@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Label = styled.div`
+export const Label = styled.label`
   font-size: 150%;
   padding-left: 39px;
   padding-top: 27px;

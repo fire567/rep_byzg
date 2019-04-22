@@ -10,10 +10,11 @@ export default class InputText extends Component {
         <Label>
           {label}
           {required && <Required>*</Required>}
+
+          <InputWrapper>
+            <Input onChange={onChange} value={value} />
+          </InputWrapper>
         </Label>
-        <InputWrapper>
-          <Input onChange={onChange} value={value} />
-        </InputWrapper>
       </div>
     );
   }

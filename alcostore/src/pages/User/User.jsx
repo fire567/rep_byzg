@@ -3,17 +3,20 @@ import axios from 'axios';
 
 import InputText from '../../components/InputText/InputText';
 import InputSelect from '../../components/InputSelect/InputSelect';
+import InputCheck from '../../components/InputCheck/InputCheck';
 
-import {
-  Wrapper,
-  Header,
-  Town,
-  InputTown,
-  Bottom,
-  Input,
-  Button,
-  SelectWrapper,
-} from './styled.js';
+import { Wrapper, Header, Bottom, Button, SelectWrapper } from './styled.js';
+
+const SEX_OPTIONS = [
+  { value: 1, label: 'мужской' },
+  { value: 2, label: 'женский' },
+  { value: 3, label: 'не определён' },
+];
+
+const PAYMENT_OPTIONS = [
+  { value: 1, label: 'картой' },
+  { value: 2, label: 'телефоном' },
+];
 
 export default class UserPage extends Component {
   state = {
@@ -76,13 +79,17 @@ export default class UserPage extends Component {
             onChange={this.handleSexChange}
             value={sex}
             label="Пол"
+            options={SEX_OPTIONS}
           />
           <InputSelect
             onChange={this.handlePayChange}
             value={payment}
             label="Способ оплаты"
+            options={PAYMENT_OPTIONS}
           />
         </SelectWrapper>
+        <InputCheck label="я согласен с условиями" />
+        <InputCheck label="хочу получать уведомления" />
         <Bottom>
           <Button onClick={this.handleSubmit}>Сохранить</Button>
         </Bottom>
