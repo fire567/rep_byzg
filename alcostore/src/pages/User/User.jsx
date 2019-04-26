@@ -23,12 +23,13 @@ export default class UserPage extends Component {
     name: '',
     town: '',
     sex: '',
+    conditions: true,
   };
 
   componentDidMount() {
     axios.get('http://localhost:3000/user').then(response => {
-      const { name, town, sex, payment } = response.data;
-      this.setState({ name, town, sex, payment });
+      const { name, town, sex, payment, conditions } = response.data;
+      this.setState({ name, town, sex, payment, conditions });
     });
   }
 
@@ -48,18 +49,23 @@ export default class UserPage extends Component {
     this.setState({ payment: event.target.value });
   };
 
+  handleConditionsChange = event => {
+    this.setState({ conditions: event.target.value });
+  };
+
   handleSubmit = () => {
-    const { name, town, sex, payment } = this.state;
+    const { name, town, sex, payment, conditions } = this.state;
     axios.put('http://localhost:3000/user', {
       name,
       town,
       sex,
       payment,
+      conditions,
     });
   };
 
   render() {
-    const { name, town, sex, payment } = this.state;
+    const { name, town, sex, payment, conditions } = this.state;
     return (
       <Wrapper>
         <Header>Введите данные</Header>
@@ -88,7 +94,11 @@ export default class UserPage extends Component {
             options={PAYMENT_OPTIONS}
           />
         </SelectWrapper>
-        <InputCheck label="я согласен с условиями" />
+        <InputCheck
+          value={conditions}
+          onChange={this.handleConditionsChange}
+          label="я согласен с условиями"
+        />
         <InputCheck label="хочу получать уведомления" />
         <Bottom>
           <Button onClick={this.handleSubmit}>Сохранить</Button>

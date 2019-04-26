@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
+import { Wrapper } from './styled.js';
+
 export default class InputCheck extends Component {
   render() {
     return (
-      <div>
+      <Wrapper>
         <label>
           <input type="checkbox" /> {this.props.label}
         </label>
-      </div>
+      </Wrapper>
     );
   }
 }
