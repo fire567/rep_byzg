@@ -1,9 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
+import 'antd/dist/antd.css';
 
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
   }
   body {
     justify-content: center;

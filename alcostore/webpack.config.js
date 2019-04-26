@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
     historyApiFallback: true,
@@ -17,14 +17,18 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
         resolve: {
-          extensions: ['.js', '.jsx']
-        }
-      }
-    ]
+          extensions: ['.js', '.jsx'],
+        },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
-  ]
+      template: './src/index.html',
+    }),
+  ],
 };

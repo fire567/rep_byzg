@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { DatePicker } from 'antd';
 
 import InputText from '../../components/InputText/InputText';
 import InputSelect from '../../components/InputSelect/InputSelect';
@@ -138,6 +139,7 @@ export default class UserPage extends Component {
           onChange={this.handleNotificationConfirmChange}
           label="хочу получать уведомления"
         />
+        <DatePicker />
         <Bottom>
           <Button onClick={this.handleSubmit}>Сохранить</Button>
         </Bottom>
