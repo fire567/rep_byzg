@@ -23,13 +23,28 @@ export default class UserPage extends Component {
     name: '',
     town: '',
     sex: '',
-    conditions: true,
+    eulaConfirm: true,
+    notificationConfirm: true,
   };
 
   componentDidMount() {
     axios.get('http://localhost:3000/user').then(response => {
-      const { name, town, sex, payment, conditions } = response.data;
-      this.setState({ name, town, sex, payment, conditions });
+      const {
+        name,
+        town,
+        sex,
+        payment,
+        eulaConfirm,
+        notificationConfirm,
+      } = response.data;
+      this.setState({
+        name,
+        town,
+        sex,
+        payment,
+        eulaConfirm,
+        notificationConfirm,
+      });
     });
   }
 
@@ -49,23 +64,42 @@ export default class UserPage extends Component {
     this.setState({ payment: event.target.value });
   };
 
-  handleConditionsChange = event => {
-    this.setState({ conditions: event.target.value });
+  handleEulaConfirmChange = event => {
+    this.setState({ eulaConfirm: event.target.checked });
+  };
+
+  handleNotificationConfirmChange = event => {
+    this.setState({ notificationConfirm: event.target.checked });
   };
 
   handleSubmit = () => {
-    const { name, town, sex, payment, conditions } = this.state;
+    const {
+      name,
+      town,
+      sex,
+      payment,
+      eulaConfirm,
+      notificationConfirm,
+    } = this.state;
     axios.put('http://localhost:3000/user', {
       name,
       town,
       sex,
       payment,
-      conditions,
+      eulaConfirm,
+      notificationConfirm,
     });
   };
 
   render() {
-    const { name, town, sex, payment, conditions } = this.state;
+    const {
+      name,
+      town,
+      sex,
+      payment,
+      eulaConfirm,
+      notificationConfirm,
+    } = this.state;
     return (
       <Wrapper>
         <Header>Введите данные</Header>
@@ -95,11 +129,15 @@ export default class UserPage extends Component {
           />
         </SelectWrapper>
         <InputCheck
-          value={conditions}
-          onChange={this.handleConditionsChange}
+          value={eulaConfirm}
+          onChange={this.handleEulaConfirmChange}
           label="я согласен с условиями"
         />
-        <InputCheck label="хочу получать уведомления" />
+        <InputCheck
+          value={notificationConfirm}
+          onChange={this.handleNotificationConfirmChange}
+          label="хочу получать уведомления"
+        />
         <Bottom>
           <Button onClick={this.handleSubmit}>Сохранить</Button>
         </Bottom>

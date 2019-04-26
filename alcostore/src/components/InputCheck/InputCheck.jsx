@@ -4,10 +4,11 @@ import { Wrapper } from './styled.js';
 
 export default class InputCheck extends Component {
   render() {
+    const { onChange, label, value } = this.props;
     return (
       <Wrapper>
         <label>
-          <input type="checkbox" /> {this.props.label}
+          <input checked={value} onChange={onChange} type="checkbox" /> {label}
         </label>
       </Wrapper>
     );

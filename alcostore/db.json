@@ -53,6 +53,7 @@
     "town": "asd",
     "sex": "2",
     "payment": "2",
-    "conditions": "on"
+    "eulaConfirm": true,
+    "notificationConfirm": false
   }
 }
