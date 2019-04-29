@@ -54,6 +54,7 @@
     "sex": "2",
     "payment": "2",
     "eulaConfirm": true,
-    "notificationConfirm": false
+    "notificationConfirm": false,
+    "birthDate": "2019-04-28T19:45:37+03:00"
   }
 }

@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import { DatePicker } from 'antd';
 import { Wrapper } from './styled';
 
-export default class birthDate extends Component {
+export default class InputDatePicker extends Component {
   render() {
     return (
       <Wrapper>
-        <DatePicker />
+        <DatePicker {...this.props} />
       </Wrapper>
     );
   }

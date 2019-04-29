@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import moment from 'moment';
 
 import InputText from '../../components/InputText/InputText';
 import InputSelect from '../../components/InputSelect/InputSelect';
 import InputCheck from '../../components/InputCheck/InputCheck';
-import birthDate from '../../components/InputDatePicker/InputDatePicker';
+import InputDatePicker from '../../components/InputDatePicker/InputDatePicker';
 
 import { Wrapper, Header, Bottom, Button, SelectWrapper } from './styled.js';
 
@@ -26,6 +27,7 @@ export default class UserPage extends Component {
     sex: '',
     eulaConfirm: true,
     notificationConfirm: true,
+    birthDate: moment(),
   };
 
   componentDidMount() {
@@ -37,6 +39,7 @@ export default class UserPage extends Component {
         payment,
         eulaConfirm,
         notificationConfirm,
+        birthDate,
       } = response.data;
       this.setState({
         name,
@@ -45,6 +48,7 @@ export default class UserPage extends Component {
         payment,
         eulaConfirm,
         notificationConfirm,
+        birthDate: moment(birthDate),
       });
     });
   }
@@ -73,6 +77,10 @@ export default class UserPage extends Component {
     this.setState({ notificationConfirm: event.target.checked });
   };
 
+  handleBirthDateChange = birthDate => {
+    this.setState({ birthDate });
+  };
+
   handleSubmit = () => {
     const {
       name,
@@ -81,6 +89,7 @@ export default class UserPage extends Component {
       payment,
       eulaConfirm,
       notificationConfirm,
+      birthDate,
     } = this.state;
     axios.put('http://localhost:3000/user', {
       name,
@@ -89,6 +98,7 @@ export default class UserPage extends Component {
       payment,
       eulaConfirm,
       notificationConfirm,
+      birthDate: birthDate.format(),
     });
   };
 
@@ -100,6 +110,7 @@ export default class UserPage extends Component {
       payment,
       eulaConfirm,
       notificationConfirm,
+      birthDate,
     } = this.state;
     return (
       <Wrapper>
@@ -139,7 +150,10 @@ export default class UserPage extends Component {
           onChange={this.handleNotificationConfirmChange}
           label="хочу получать уведомления"
         />
-        <birthDate />
+        <InputDatePicker
+          value={birthDate}
+          onChange={this.handleBirthDateChange}
+        />
         <Bottom>
           <Button onClick={this.handleSubmit}>Сохранить</Button>
         </Bottom>
