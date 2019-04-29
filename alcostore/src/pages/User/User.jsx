@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { DatePicker } from 'antd';
 
 import InputText from '../../components/InputText/InputText';
 import InputSelect from '../../components/InputSelect/InputSelect';
 import InputCheck from '../../components/InputCheck/InputCheck';
+import birthDate from '../../components/InputDatePicker/InputDatePicker';
 
 import { Wrapper, Header, Bottom, Button, SelectWrapper } from './styled.js';
 
@@ -139,7 +139,7 @@ export default class UserPage extends Component {
           onChange={this.handleNotificationConfirmChange}
           label="хочу получать уведомления"
         />
-        <DatePicker />
+        <birthDate />
         <Bottom>
           <Button onClick={this.handleSubmit}>Сохранить</Button>
         </Bottom>
