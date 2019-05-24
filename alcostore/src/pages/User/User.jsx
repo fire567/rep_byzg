@@ -78,7 +78,9 @@ export default class UserPage extends Component {
   };
 
   handleBirthDateChange = birthDate => {
-    this.setState({ birthDate });
+    if (birthDate.isBefore(moment().subtract(18, 'year'))) {
+      this.setState({ birthDate });
+    }
   };
 
   handleSubmit = () => {
@@ -153,6 +155,7 @@ export default class UserPage extends Component {
         <InputDatePicker
           value={birthDate}
           onChange={this.handleBirthDateChange}
+          label="Дата рождения"
         />
         <Bottom>
           <Button onClick={this.handleSubmit}>Сохранить</Button>

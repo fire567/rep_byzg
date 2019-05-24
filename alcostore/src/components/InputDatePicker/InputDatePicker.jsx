@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
 import { DatePicker } from 'antd';
-import { Wrapper } from './styled';
+import { Label, Wrapper } from './styled';
 
 export default class InputDatePicker extends Component {
   render() {
+    const { label, ...antdAttrs } = this.props;
     return (
       <Wrapper>
-        <DatePicker {...this.props} />
+        <Label>{label}</Label>
+        <DatePicker {...antdAttrs} />
       </Wrapper>
     );
   }

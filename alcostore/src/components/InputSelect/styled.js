@@ -8,7 +8,6 @@ export const Label = styled.div`
 `;
 
 export const Select = styled.select`
-  margin-top: 24px;
   margin-left: 39px;
 `;
 

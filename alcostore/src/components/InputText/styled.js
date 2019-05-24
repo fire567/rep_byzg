@@ -9,7 +9,6 @@ export const Label = styled.label`
 
 export const InputWrapper = styled.div`
   padding-left: 39px;
-  padding-top: 27px;
 `;
 
 export const Input = styled.input`
